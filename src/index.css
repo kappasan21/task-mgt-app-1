@@ -1,0 +1,467 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
+
+
+
+#taskmgt-btn-container {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  width: 30%;
+  gap: 5px;
+  /* visibility: none; */
+}
+
+
+
+
+
+/* HEADER AND FOOTER */
+#App-header, #App-footer {
+  background-color: rgb(6, 194, 122);
+  color: white;
+  padding: 3%;
+}
+
+#App-header {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+#App-header-left,
+#App-header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#App-header-left button,
+#App-header-right p {
+  border-radius: 5px;
+  width: 80%;
+  background-color: green;
+  border: 1px solid green;
+  color: ivory;
+  cursor: pointer;
+  padding: 2px;
+}
+
+#App-header-right p {
+  display: flex;
+  justify-content: space-around;
+}
+
+#App-header-left .menu-btn {
+  margin: 0 auto 1rem auto;
+}
+
+#App-header-left .logout-btn {
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+#main-title {
+  margin-bottom: 0.2rem;
+}
+
+#main-second-title {
+  opacity: 0.7;
+  font-weight: bold;
+  height: 2rem;
+  padding: 2%;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+
+
+#App-main {
+  padding: 4% 15%;
+  min-height: 60vh;
+}
+
+
+
+#App-footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  min-height: 11.5vh;
+}
+
+#footer-center-container {
+  text-align: center;
+  display: grid;
+  align-content: center;
+}
+
+#footer-right-container {
+  padding-left: 10vw;
+}
+
+
+/* TASK INPUT FORM */
+#task-input-form {
+  background-color: lightgreen;
+  border-radius: 10px;
+  padding: 5% 10%;
+}
+
+#task-input-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#task-details {
+  height: 3rem;
+}
+
+#task-input-form button {
+  border: 1px solid darkgray;
+  text-decoration: underline;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 2rem;
+}
+
+
+
+#remaining {
+  border: 1px solid limegreen;
+}
+
+
+
+
+
+
+
+
+/* TASK LIST */
+#tasklist-container {
+  background-color: lightgreen;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+#tasklist-title {
+  text-align: center;
+}
+
+/* #tasklist {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+
+
+#tasklist-task {
+  /* background-color: limegreen; */
+  background-color: lightgoldenrodyellow;
+  border-radius: 5px;
+  padding: 4%;
+  list-style: none;
+  margin: 3%;
+  /* color: ivory; */
+  min-width: 300px;
+  font-size: 1rem;
+}
+
+#tasklist-task p {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 1rem;
+}
+
+#col1 {
+  /* border: 1px solid black; */
+  font-weight: bold;
+}
+
+#col2 {
+  /* border: 1px solid red; */
+  text-align: left;
+}
+
+.tasklist-btn {
+  height: 2rem;
+  width: 48%;
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#tasklist-task-delete-btn {
+  margin-right: 3%;
+}
+
+
+#tasklist-task-title {
+  font-size: 1.2rem;
+}
+
+
+#tasklist-task-remaining #col2,
+#tasklist-task-status #col2 {
+  font-weight: bold;
+  color: blue;
+}
+
+
+#tasklist2 {
+  position: absolute;
+  top: 10vh;
+  left: 1%;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 3%;
+  list-style: none;
+  width: 90vw;
+  z-index: 100;
+  overflow: hidden;
+}
+
+#listup-filter {
+  background-color: black;
+  /* opacity: 0.8; */
+  z-index: 20;
+  height: 1000vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+#tasklist2-titlebar,
+#tasklist2-contents {
+  display: grid;
+  /* grid-template-columns: 1fr 2fr 4fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: 5% 15% 30% 7.5% 7.5% 7.5% 7.5% 5% 5%;
+  text-align: left;
+  overflow: auto;
+  gap: 5px;
+  border: 1px solid gray;
+}
+
+#tasklist2-titlebar {
+  font-weight: bold;
+}
+
+#listup-btn,
+#closelist-btn {
+  background-color: orange;
+  border: 1px solid darkorange;
+  font-weight: bold;
+  height: 2rem;
+  width: 30vw;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto 1rem auto;
+}
+
+#task-delete-btn,
+#task-edit-btn {
+  border-radius: 5px;
+  height: 3vh;
+  width: 3vw;
+  margin: auto;
+}
+
+#task-list-id,
+#task-list-status,
+#task-list-priority,
+#task-list-due,
+#task-list-remaining,
+#tasklist2-titlebar p {
+  margin: auto;
+}
+
+
+
+
+
+
+/* TASK INPUT */
+#task-input-form {
+  margin-bottom: 3rem;
+}
+
+#task-input-form input, textarea, select, button{
+  width: 100%;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#task-input-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+#appoint-mgt-msg-container {
+  margin-bottom: 2rem;
+}
+
+#appoint-list-container {
+  margin-bottom: 2rem;
+}
+
+/* #appoint-list-container {
+  border: 1px solid black;
+} */
+
+
+
+#report-icon {
+  margin-bottom: -5px;
+}
+
+
+#appoint-input-form {
+  margin-bottom: 2rem; 
+  background-color: lightgreen;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+#appoint-input-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#appoint-input-form input {
+  width:99.7%;
+  height: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+#appoint-input-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#appoint-input-form button {
+  margin-top: 2rem;
+  border-radius: 5px;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  text-decoration: underline;
+  height: 2rem;
+}
+
+
+hr {
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+.rbc-toolbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: -100px;
+}
+
+.rbc-toolbar button {
+  font-size: 12px;
+  padding: 5px;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.rbc-toolbar-label {
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* APPOINT LIST */
+#appoint-list-container {
+  background-color: lightgreen;
+  border-radius: 10px;
+  padding: 3%;
+}
+
+#appoint-list-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.appointment-card {
+  background-color: limegreen;
+  padding: 3%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.appointment-card h3, 
+.appointment-card p {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 5px;
+}
+
+.appointment-card button {
+  border-radius: 5px;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 2rem;
+  margin-top: 1rem;
+}
