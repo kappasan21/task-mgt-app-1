@@ -16,7 +16,7 @@ export default function CalendarSection(props) {
   const { appoints } = props;
   
   // useContext testing!!! 
-  const context = useContext(AppointContext);
+  // const context = useContext(AppointContext);
 
 
 
