@@ -5,8 +5,8 @@ import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 
-import { useContext } from 'react';
-import { AppointContext } from '../App.js';
+// import { useContext } from 'react';
+// import { AppointContext } from '../App.js';
 
 
 // configure localizer
