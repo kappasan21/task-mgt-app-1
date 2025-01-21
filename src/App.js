@@ -219,13 +219,13 @@ function App() {
   // JSX
   return (
     <div id="App-body">
-      {!isAuthenticated ? 
-        <div>
-          <p>The authentication token has been expired...</p>
-          <p>Please login again.</p>
-          <button style={{width: "50%", margin: "0 auto"}} onClick={handleBackToLoginClick}>Back to Login Page</button>
-        </div>
-        :
+      // {!isAuthenticated ? 
+      //   <div>
+      //     <p>The authentication token has been expired...</p>
+      //     <p>Please login again.</p>
+      //     <button style={{width: "50%", margin: "0 auto"}} onClick={handleBackToLoginClick}>Back to Login Page</button>
+      //   </div>
+      //   :
         <div className="App" ref={modifyFirmRef}>
           <div id="App-header">
             <div id="App-header-left">
@@ -292,7 +292,7 @@ function App() {
             </div>
           </div>
         </div>
-      }
+      // }
     </div>
   );
 }
