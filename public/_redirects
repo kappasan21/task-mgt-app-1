@@ -1,0 +1,5 @@
+/* /index.html 200               # Serve index.html for all routes
+/assets/* 403                   # Block access to files in the assets folder
+/secret-folder/* 403            # Block access to the secret folder
+/api/private-endpoint 403       # Block access to a specific API endpoint
+/download-app/* 404             # Return a 404 for specific download routes
