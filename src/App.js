@@ -229,8 +229,8 @@ function App() {
         <div className="App" ref={modifyFirmRef}>
           <div id="App-header">
             <div id="App-header-left">
-              // <button className="menu-btn" onClick={handleBackToMenuClick}>Back To Menu</button>
-              // <button className="logout-btn" onClick={handleBackToLoginClick}>Logout</button>
+              {/*<button className="menu-btn" onClick={handleBackToMenuClick}>Back To Menu</button>
+              <button className="logout-btn" onClick={handleBackToLoginClick}>Logout</button> */}
             </div>
             {page===1 ? 
               <div id="App-header-center">
@@ -246,7 +246,7 @@ function App() {
               : 
             <p>Error</p>}
             <div id="App-header-right">
-              // <p><span id="col1">USER:</span><span id="col2">{tokenUser}</span></p>
+              {/* <p><span id="col1">USER:</span><span id="col2">{tokenUser}</span></p> */}
             </div>
           </div>
 
