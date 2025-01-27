@@ -219,7 +219,11 @@ function App() {
   // JSX
   return (
     <div id="App-body">
+<<<<<<< Updated upstream
     {/* {!isAuthenticated ? 
+=======
+      {/* {!isAuthenticated ? 
+>>>>>>> Stashed changes
         <div>
           <p>The authentication token has been expired...</p>
           <p>Please login again.</p>
@@ -292,7 +296,11 @@ function App() {
             </div>
           </div>
         </div>
+<<<<<<< Updated upstream
   {/* } */}
+=======
+      {/* } */}
+>>>>>>> Stashed changes
     </div>
   );
 }
